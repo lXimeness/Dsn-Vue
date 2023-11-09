@@ -1,0 +1,82 @@
+
+.Cliente {
+  background-color: #f0f0f0; 
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.form-container {
+  color: #fff; 
+}
+
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #007BFF;
+  border-radius: 5px;
+  background-color: #fff; 
+  color: #000; 
+}
+
+
+.cliente-list {
+  background-color: #000; 
+  color: #fff; 
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.cliente-list li {
+  margin-bottom: 10px; 
+}
+
+
+.button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+
+  .form-container {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+ 
+    .button-group {
+      margin-top: 10px; 
+    }
+    
+    .edit-button,
+    .delete-button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      margin-right: 10px; 
+    }
