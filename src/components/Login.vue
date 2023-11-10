@@ -1,9 +1,9 @@
 <template>
   <div class="login-container">
+    <darkmodeVuearkMode/>
     <div class="background-image"></div>
     <div class="login">
       <h1>Login</h1>
-      <darkmodeVuearkMode/>
       <form @submit.prevent="login">
         <div class="form-group">
           <label for="email">Email:</label>
@@ -25,6 +25,7 @@
 <script>
 import darkmodeVuearkMode from '@/components/darkmode.vue'
 import AuthService from '@/service/Authservice';
+
 export default {
   components: {
     darkmodeVuearkMode,
@@ -38,22 +39,22 @@ export default {
     };
   },
   methods: {
-  async login() {
-    this.error = '';
-    this.loginSuccess = false;
+    async login() {
+      this.error = '';
+      this.loginSuccess = false;
 
-    try {
-      await AuthService.login(this.email, this.password);
-      this.$router.push('/dashboard');
-    } catch (error) {
-      if (error.message === 'Erro na autenticação') {
-        this.error = 'E-mail ou senha incorretos';
-      } else {
-        this.error = 'E-mail ou senha incorretos';
+      try {
+        await AuthService.login(this.email, this.password);
+        this.$router.push('/dashboard');
+      } catch (error) {
+        if (error.message === 'Erro na autenticação') {
+          this.error = 'E-mail ou senha incorretos';
+        } else {
+          this.error = 'E-mail ou senha incorretos';
+        }
       }
-    }
+    },
   },
-},
 };
 </script>
 

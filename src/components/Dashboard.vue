@@ -36,6 +36,7 @@
           <graficosProdutos></graficosProdutos>
         </div>
       </div>
+      <button class="logout-button" @click="logout">Logout</button>
     </div>
   </div>
 </template>
@@ -82,6 +83,14 @@ export default {
     console.error('Erro ao buscar o total de produtos:', error);
   }
 },
+async logout() {
+
+      window.localStorage.removeItem('token');
+      
+
+      
+      await this.$router.push('/login');
+    },
 
 async getTotalClientes() {
   try {
@@ -106,9 +115,6 @@ async getTotalClientes() {
 </script>
 
 <style scoped>
-/* Estilos específicos do componente Dashboard.vue */
 
-/* Importar estilos externos */
 @import './Css/Dashboardcss.css';
-/* Outros estilos específicos do componente Dashboard.vue */
 </style>

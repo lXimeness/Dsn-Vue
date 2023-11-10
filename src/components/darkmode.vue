@@ -1,3 +1,4 @@
+
 <template>
   <body color-scheme="isDark ? 'dark' : 'ligth' ">
     <label class="switch">
@@ -99,7 +100,7 @@ input:checked + .slider:before {
 }
 
 .slider.round:before {
-  border-radius: 50%;
+  border-radius: 100%;
 }
 [color-scheme='dark']{
   background-color: black;
