@@ -1,4 +1,4 @@
-// apiService.js
+
 
 import axios from 'axios';
 
@@ -23,7 +23,6 @@ const ApiService = {
     return response.data;
   },
 
-  // Implemente outras funções para clientes, usuários, etc.
 };
 
 export default ApiService;

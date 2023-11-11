@@ -34,7 +34,7 @@
             {
               label: 'Produtos com Quantidade Negativa ou Zerada',
               backgroundColor: 'rgba(255, 99, 132, 0.2)',
-              borderColor: 'rgba(255, 99, 132, 1)',
+              borderColor: '#DC143C',
               borderWidth: 1,
               data: [],
             },

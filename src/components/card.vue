@@ -1,5 +1,5 @@
 <template>
-  <v-card class="my-card" elevation="2" transition="scale-transition">
+  <v-card class="card my-card" elevation="2" transition="scale-transition">
     <v-card-title class="text-h5">{{ title }}</v-card-title>
     <v-card-text>
       <v-responsive>
@@ -20,12 +20,12 @@ export default {
 
 <style scoped>
 .my-card {
-  max-width: 400px; /* Defina a largura máxima do card conforme necessário */
-  margin: auto; /* Centraliza o card na tela */
+  max-width: 400px; 
+  margin: auto; 
+  border: 2px solid #007BFF;
+  border-radius: 8px;
 }
 
-/* Adicione estilos de animação conforme necessário */
-.v-enter-scale-transition,
 .v-leave-scale-transition-to {
   transform: scale(0);
   transition: transform 0.5s;

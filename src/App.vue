@@ -1,7 +1,6 @@
 <template>
   <div>
     <nav>
-      <!-- Seu conteúdo nav aqui -->
     </nav>
     <router-view/>
   </div>

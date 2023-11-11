@@ -1,9 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import Login from '../components/Login.vue';
+import login from '../components/login.vue';
 import MainPage from '../views/Mainpage.vue';
-import Dashboard from '../components/Dashboard.vue';
-import ProdutoCrud from '../components/ProdutoCrud.vue'; // Importe ProdutoCrud
-import ClienteCrud from '../components/ClienteCrud.vue'; // Importe ClienteCrud
+import dashboard from '../components/dashboard.vue';
+import produtoCrud from '../components/produtoCrud.vue'; 
+import clienteCrud from '../components/clienteCrud.vue'; 
 import card from '../components/card.vue'
 const routes = [
   {
@@ -12,19 +12,19 @@ const routes = [
     component: MainPage,
   },
   {
-    path: '/ProdutoCrud',
-    name: 'ProdutoCrud',
-    component: ProdutoCrud, 
+    path: '/produtoCrud',
+    name: 'produtoCrud',
+    component: produtoCrud, 
   },
   {
-    path: '/ClienteCrud',
-    name: 'ClienteCrud',
-    component: ClienteCrud, 
+    path: '/clienteCrud',
+    name: 'clienteCrud',
+    component: clienteCrud, 
   },
   {
-    path: '/Dashboard',
-    name: 'Dashboard',
-    component: Dashboard,
+    path: '/dashboard',
+    name: 'dashboard',
+    component: dashboard,
   },
   {
   path: '/card',
@@ -33,30 +33,30 @@ const routes = [
   },
   {
     path: '/produtos',
-    name: 'Produtos', // Nome da rota
-    component: ProdutoCrud,
+    name: 'produtos', 
+    component: produtoCrud,
   }
 ,  
   {
     path: '/dashboard/clientes',
-    name: 'Clientes', // Nome da rota, se necessário
-    component: ClienteCrud, // Use o componente ClienteCrud
+    name: 'clientes', 
+    component: clienteCrud, 
   },
   {
     path: '/dashboard/produtos',
-    name: 'Produtos', // Nome da rota, se necessário
-    component: ProdutoCrud, // Use o componente ProdutoCrud
+    name: 'produtos', 
+    component: produtoCrud, 
   },
   {
-    path: '/Login',
-    name: 'Login',
-    component: Login,
+    path: '/login',
+    name: 'login',
+    component: login,
   },
   {
     path: '/',
-    redirect: '/Login', // Redirecionar para a rota de login por padrão
+    redirect: '/login', 
   },
-  // ... outras rotas do seu aplicativo
+
 ];
 
 const router = createRouter({

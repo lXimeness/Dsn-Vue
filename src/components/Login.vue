@@ -1,7 +1,6 @@
 <template>
   <div class="login-container">
     <darkmodeVuearkMode/>
-    <div class="background-image"></div>
     <div class="login">
       <h1>Login</h1>
       <form @submit.prevent="login">
@@ -59,5 +58,83 @@ export default {
 </script>
 
 <style scoped>
-@import './Css/Login.css';
+.login-container {
+    position: relative;
+    border: #007BFF;
+    height: 100vh;
+  }
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/Image.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+  }
+  
+  .login {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  background: #f8f8ff;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1;
+  border: 2px solid #007BFF;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+
+
+#email {
+  border: 1px solid #007BFF;
+  padding: 8px;
+  border-radius: 5px;
+}
+#password {
+  border: 1px solid #007BFF;
+  padding: 8px;
+  border-radius: 5px;
+}
+  
+  .error {
+    color: red;
+  }
+  
+  .btn {
+    background-color:#007BFF;
+    color:#0e0e0e;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+    width: 100%; 
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    background-color: #007BFF;
+  }
+
+  .dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color:#000;
+    z-index: 1; 
+  }
+
+.dark-mode {
+  background-color: #333;
+  color: white;;
+}
 </style>

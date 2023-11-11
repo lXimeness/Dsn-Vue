@@ -48,7 +48,6 @@
         <button class="go-back-button" @click="goBack">Voltar</button>
       </form>
 
-      <!-- Lista de Produtos -->
       <div class="product-list">
         <h2>Lista de Produtos</h2>
         <ul>
@@ -130,7 +129,7 @@ export default {
             quantidadeEstoque: 0,
             observacao: 'Produto original',
           };
-          this.getProducts(); // Atualiza a lista de produtos após a adição bem-sucedida
+          this.getProducts(); 
         } else {
           console.error('Erro ao adicionar o produto:', response.data);
         }
@@ -196,5 +195,75 @@ export default {
 </script>
 
 <style scoped>
-@import './Css/Produto.css';
+ .button-group {
+    margin-top: 10px; 
+  }
+  
+  .edit-button,
+  .delete-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px; 
+  }
+  
+  .edit-button:hover,
+  .delete-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .form-container {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background-color: #fff; 
+    color: #000;
+  }
+  
+
+  .product-list {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #01060a;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .product-list li {
+    margin-bottom: 10px; 
+  }
+
+  .go-back-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .go-back-button:hover {
+    background-color: #0056b3;
+  }
+
 </style>

@@ -31,7 +31,7 @@
             {
               label: 'Estoque',
               backgroundColor: 'rgba(75, 192, 192, 0.2)',
-              borderColor: 'rgba(75, 192, 192, 1)',
+              borderColor: '#00FFFF',
               borderWidth: 1,
               data: [],
             },
@@ -48,7 +48,7 @@
     },
     methods: {
 
-        async fetchProductData() {
+      async fetchProductData() {
   try {
     const token = window.localStorage.getItem('token');
     const response = await axios.get('http://localhost:3400/produtos', {
@@ -56,15 +56,16 @@
         'Authorization': token
       }
     });
-    
-    if (response.status === 200) {
-      const produtosOrdenadosPorEstoque = response.data.sort((a, b) => b.quantidadeEstoque - a.quantidadeEstoque);
 
-      // Atualiza os dados do gráfico com os produtos ordenados por estoque
+    if (response.status === 200) {
+      const produtosPositivos = response.data.filter((produto) => produto.quantidadeEstoque > 0);
+      const produtosOrdenadosPorEstoque = produtosPositivos.sort((a, b) => b.quantidadeEstoque - a.quantidadeEstoque);
+
+ 
       this.chartData.labels = produtosOrdenadosPorEstoque.map((produto) => produto.nome);
       this.chartData.datasets[0].data = produtosOrdenadosPorEstoque.map((produto) => produto.quantidadeEstoque);
 
-      // Renderiza o gráfico com os novos dados
+
       this.renderChart();
     } else {
       console.error('Erro ao buscar os produtos:', response.data);

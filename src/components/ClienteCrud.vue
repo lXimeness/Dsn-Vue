@@ -7,7 +7,7 @@
   </div>
   <div class="form-group">
     <label for="clienteDataCadastro">Data de Cadastro:</label>
-    <input type="date" id="clienteDataCadastro" v-model="clienteEditando.dataCadastro" required>
+    <input type="date" id="clienteDataCadastro" v-model="clienteEditando.dataCadastro" >
   </div>
   <div class="form-group">
     <label for="clienteCpf">CPF ou CNPJ:</label>
@@ -29,8 +29,6 @@
   <button class="cancel-button" @click="cancelarEdicao">Cancelar</button>
 </form>
 
-
-
   <div class ="container">
   <form @submit.prevent="addCliente" class="form-container">
     <h2>Adicionar Cliente</h2>
@@ -38,8 +36,6 @@
       <label for="clienteNome">Nome:</label>
       <input type="text" id="clienteNome" v-model="newCliente.nome" required>
     </div>
-
-
 
 
     <div class="form-group">
@@ -244,5 +240,91 @@ goBack()
 </script>
 
 <style scoped>
-@import './Css/Cliente.css';
+
+
+.form-container {
+  color: #fff; 
+}
+
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #007BFF;
+  border-radius: 5px;
+  background-color: #fff; 
+  color: #000; 
+}
+
+
+.cliente-list {
+  background-color: #000; 
+  color: #fff; 
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.cliente-list li {
+  margin-bottom: 10px; 
+}
+
+
+.button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.go-back-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  .form-container {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+ 
+    .button-group {
+      margin-top: 10px; 
+    }
+    
+    .edit-button,
+    .delete-button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      margin-right: 10px; 
+    }
 </style>

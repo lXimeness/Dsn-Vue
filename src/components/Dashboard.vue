@@ -1,22 +1,16 @@
 <template>
   <div class="dashboard">
     <div class="card-container">
-      <!-- Formulário para adicionar um produto -->
       <form @submit.prevent="addProduct">
         <h2>Bem-Vindo</h2>
         <darkmodeVuearkMode class="button_dark" />
-        <!-- Se precisar adicionar algum conteúdo ao formulário, pode adicionar dentro da div .form-group -->
       </form>
       <span class="dark-mode-text">Dark Mode</span>
     </div>
-
-    <!-- Lista de Produtos -->
-    <!-- Botão para ir para a página de produtos -->
     <router-link to="/dashboard/produtos">
       <button class="button">Ir para Produtos</button>
     </router-link>
 
-    <!-- Botão para ir para a página de clientes -->
     <router-link to="/dashboard/clientes">
       <button class="button">Ir para Clientes</button>
     </router-link>
@@ -116,5 +110,52 @@ async getTotalClientes() {
 
 <style scoped>
 
-@import './Css/Dashboardcss.css';
+.tab-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  color: #000000;
+  transition: background-color 0.3s;
+}
+
+
+
+.button {
+  background-color: #000000;
+  color: #00FFFF;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+.button:hover {
+  background-color: #b98383;
+}
+.logout-button {
+  background-color: #007BFF; 
+  color: #ffffff; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px;
+}
+
+.logout-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+}
+
 </style>

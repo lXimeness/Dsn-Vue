@@ -103,9 +103,15 @@ input:checked + .slider:before {
   border-radius: 100%;
 }
 [color-scheme='dark']{
-  background-color: black;
+  background-image: url("../assets/background_darkmode.jpg") ;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
 }
 [color-scheme='ligth']{
-  background-color: white;
+  background-image: url("../assets/Back.jpg") ;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
 }
 </style>
