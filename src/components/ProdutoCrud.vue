@@ -122,7 +122,6 @@ export default {
         });
 
         if (response.status === 200) {
-          console.log('Produto adicionado com sucesso!');
           this.newProduct = {
             nome: '',
             valor: 0,
@@ -149,7 +148,6 @@ export default {
           });
 
           if (response.status === 200) {
-            console.log('Produto atualizado com sucesso!');
             this.editingProduct = null;
             this.getProducts();
           } else {
@@ -177,7 +175,6 @@ export default {
         });
 
         if (response.status === 200) {
-          console.log('Produto excluído com sucesso!');
           this.getProducts();
         } else {
           console.error('Erro ao excluir o produto:', response.data);

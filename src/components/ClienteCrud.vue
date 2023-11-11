@@ -140,7 +140,6 @@ methods: {
       });
 
       if (response.status === 200) {
-        console.log('Cliente adicionado com sucesso!');
         this.newCliente = {
           nome: '',
           dataCadastro: '',
@@ -174,7 +173,6 @@ methods: {
     });
 
     if (response.status === 200) {
-      console.log('Cliente excluído com sucesso!');
       this.getClientes();
     } else {
       console.error('Erro ao excluir o cliente:', response.data);
@@ -199,7 +197,6 @@ async atualizarCliente() {
         );
 
         if (response.status === 200) {
-          console.log('Cliente editado com sucesso!');
           this.getClientes();
           this.clienteEditando = null;  
         } else {
@@ -220,9 +217,7 @@ async editCliente(cliente) {
       }
     });
 
-    if (response.status === 200) {
-      console.log('Cliente editado com sucesso!');
-     
+    if (response.status === 200) {     
       this.clienteEditando = response.data;
     } else {
       console.error('Erro ao editar o cliente:', response.data);

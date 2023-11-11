@@ -68,7 +68,6 @@ export default {
       }
     });
     if (response.status === 200) {
-      console.log('Produtos puxados com sucesso!');
       this.totalProdutos = response.data.length;
     } else {
       console.error('Erro ao buscar o total de produtos:', response.data);
@@ -95,7 +94,6 @@ async getTotalClientes() {
       }
     });
     if (response.status === 200) {
-      console.log('Clientes puxados com sucesso!');
       this.totalClientes = response.data.length;
     } else {
       console.error('Erro ao buscar o total de clientes:', response.data);
